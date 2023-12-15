@@ -1,0 +1,3 @@
+Butter chicken,15.0,Tender chicken cooked in rich creamy curry sauce
+Briany,15.0,Basmatie rice and a chicken dept in rich blend or aromatic spices
+Grilled chicken,10.0,chicken
