@@ -48,11 +48,14 @@ public class Order {
 
         do {
             try {
+                System.out.println("-------------------------------------------------------------------------");
                 System.out.println("Please enter the choice number of preferred time to pick up your order : ");
                 System.out.println("1.Morning (between 7am-12pm)");
                 System.out.println("2.Afternoon (between 12pm-4pm)");
                 System.out.println("3.Evening (between 4pm-7pm)");
                 System.out.println("4.Night (between 7pm-10pm)");
+                System.out.println("-------------------------------------------------------------------------");
+
                 pick_up_order = input.nextInt();
 
                 // Array to store time descriptions

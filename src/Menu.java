@@ -33,7 +33,7 @@ public class Menu {
     }
     public void displayMenu() {
         for (int i = 0; i < menuItems.size(); i++) {
-            System.out.print((i + 1) + ". ");
+            System.out.println((i + 1) + ". ");
             menuItems.get(i).display();
         }
     }

@@ -244,15 +244,18 @@ while(true){
         }
 
         do {
+            System.out.println("-------------------------------------------------------------------------");
             System.out.println("1. Add Dish to Menu");
             System.out.println("2. Remove Dish from Menu");
             System.out.println("3. Update Dish Price");
             System.out.println("4. View Menu");
             System.out.println("5. View Daily Report");
             System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.println("Enter your choice: ");
+            System.out.println("-------------------------------------------------------------------------");
 
             int choice = getValidIntegerInput(scanner);
+
 
             switch (choice) {
                 case 1:
@@ -307,15 +310,19 @@ while(true){
         boolean state = true;
 
         Scanner read = new Scanner(System.in);
+        System.out.println("                       Welcome To Rush Munch                             ");
+        System.out.println("-------------------------------------------------------------------------");
 
         do {
-            System.out.println("Welcome To Rush Munch");
+            System.out.println("-------------------------------------------------------------------------");
 
             System.out.println("press 1 to register");
 
             System.out.println("press 2 to login");
 
             System.out.println("press 0 to close the program");
+            System.out.println("-------------------------------------------------------------------------");
+
 
             try {
                 option = read.nextInt();
@@ -373,11 +380,14 @@ while(true){
         while (true) {
             int choice;
             Scanner scanner = new Scanner(System.in);
+            System.out.println("-------------------------------------------------------------------------");
             System.out.println("Please enter your choice:");
             System.out.println("1) Display all restaurants.");
             System.out.println("2) Search.");
             System.out.println("3) View cart.");
             System.out.println("4) Log out.");
+            System.out.println("-------------------------------------------------------------------------");
+
 
             try {
                 choice = scanner.nextInt();
@@ -434,11 +444,13 @@ while(true){
                 resScanner.nextLine(); // Clear the invalid input
             }
         }
-
+        System.out.println("-------------------------------------------------------------------------");
         System.out.println("1) View Menu");
         System.out.println("2) View Reviews");
         System.out.println("3) Go back");
         System.out.println("Please enter your choice: 1-3:");
+        System.out.println("-------------------------------------------------------------------------");
+
         int viewChoice=0;
 
         while(true){
@@ -609,10 +621,12 @@ System.out.println("Invalid, please try again.");
 
     public void search() {
         while (true) {
+            System.out.println("-------------------------------------------------------------------------");
             System.out.println("Please enter your choice:");
             System.out.println("1) Search by restaurant name.");
             System.out.println("2) Search by restaurant category.");
             System.out.println("3) Go back.");
+            System.out.println("-------------------------------------------------------------------------");
 
             Scanner scanner = new Scanner(System.in);
 
@@ -712,11 +726,14 @@ System.out.println("Invalid, please try again.");
 
 
         while (true) {
+            System.out.println("-------------------------------------------------------------------------");
             System.out.println("Please enter your choice:");
             System.out.println("1) Edit your order.");
             System.out.println("2) Place your order.");
             System.out.println("3) Go back.");
+
             Scanner scanner = new Scanner(System.in);
+            System.out.println("-------------------------------------------------------------------------");
             int cartChoice;
             try {
                 cartChoice = scanner.nextInt();
@@ -728,11 +745,14 @@ System.out.println("Invalid, please try again.");
 
             if (cartChoice == 1) {
                 while (true) {
+                    System.out.println("-------------------------------------------------------------------------");
                     System.out.println("Please enter your choice:");
                     System.out.println("1) Edit quantity.");
                     System.out.println("2) Delete an item.");
                     System.out.println("3) Go back");
                     Scanner scanner1 = new Scanner(System.in);
+                    System.out.println("-------------------------------------------------------------------------");
+
                     int cusChoice;
 
                     try {

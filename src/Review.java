@@ -54,9 +54,11 @@ public  class Review {
 
     public void display(){
         System.out.println(this.dish.getName());
-
+        System.out.println("-------------------------------------------------------------------------");
         System.out.println("Rating ="+rating);
         System.out.println("Feedback:"+feedback);
+        System.out.println("-------------------------------------------------------------------------");
+
 
     }
 }

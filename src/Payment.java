@@ -37,10 +37,11 @@ public class Payment {
         return total;
     }
     public void paymentinfo(){
-        System.out.println("the total is"+total);
+        System.out.println("-------------------------------------------------------------------------");
+        System.out.println("The total is"+total);
         System.out.println("Payment Method: " + payment_method);
         System.out.println("Payment Status: " +(payment_status?"valid payment":"invalid payment"));
-
+        System.out.println("-------------------------------------------------------------------------");
     }
 
 
@@ -48,9 +49,12 @@ public class Payment {
         Scanner scanner = new Scanner(System.in);
 
         // Ask the user to choose a payment method
+        System.out.println("-------------------------------------------------------------------------");
         System.out.println("Choose a payment method: ");
         System.out.println("1. Credit");
         System.out.println("2. Cash");
+        System.out.println("-------------------------------------------------------------------------");
+
 
         int choice = scanner.nextInt();
         scanner.nextLine();

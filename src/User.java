@@ -145,6 +145,6 @@ public class User extends Person {
 
     @Override
     public void displayInfo() {
-System.out.println("Welcome user "+getUserName());
+    System.out.println("-----------------------Welcome user "+getUserName()+"-----------------------");
     }
 }

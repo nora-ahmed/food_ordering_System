@@ -17,7 +17,9 @@ public Admin(){
 
     @Override
     public void displayInfo() {
-        System.out.println("Welcome admin Susan. ");
+        System.out.println("---------------------------Welcome admin Susan---------------------------");
+        System.out.println("-------------------------------------------------------------------------");
+
     }
 
 
@@ -60,10 +62,12 @@ public Admin(){
                 totalProfit += orderTotal;
             }
         }
-
+        System.out.println("-------------------------------------------------------------------------");
         System.out.println("Reports for the day:");
         System.out.println("Total Profit: $" + totalProfit);
         System.out.println("Total Number of Orders: " + totalOrders);
+        System.out.println("-------------------------------------------------------------------------");
+
     }
 
 }

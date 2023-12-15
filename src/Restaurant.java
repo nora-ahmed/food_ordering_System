@@ -71,6 +71,7 @@ public class Restaurant {
     }
 
     public void displayMenu() {
+        System.out.println("-------------------------------------------------------------------------");
 
         System.out.println("Restaurant: " + name);
 

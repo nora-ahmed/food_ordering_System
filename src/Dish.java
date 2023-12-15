@@ -39,10 +39,12 @@ public class Dish {
         this.price = price;
     }
     public void display(){
-
+        System.out.println("-------------------------------------------------------------------------");
         System.out.println("Name: "+name);
         System.out.println("Price: "+price);
         System.out.println("Description: "+description);
+        System.out.println("-------------------------------------------------------------------------");
+
 
     }
 
