@@ -16,9 +16,10 @@ public class Order {
 
     private Payment payment;
 
-    public Order(Cart cart, User user, Restaurant restaurant, Payment payment) {
+    public Order(Cart cart, Person person, Restaurant restaurant, Payment payment) {
+
         this.cart = cart;
-        this.user = user;
+        this.user = (User)person;
         this.restaurant_name = restaurant.getName(); // calling the name from another class
         this.payment = payment;
     }
