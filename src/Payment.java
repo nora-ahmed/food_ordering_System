@@ -1,11 +1,11 @@
 import java.util.Scanner;
 public class Payment {
     private String payment_method;
-    public  int TransactionID;
+
     private boolean payment_status=false;
     private double total;
     private String creditCardNumber;
-
+    private String CCV;
 
 
 
@@ -39,7 +39,7 @@ public class Payment {
     public void paymentinfo(){
         System.out.println("the total is"+total);
         System.out.println("Payment Method: " + payment_method);
-        System.out.println("Payment Status: " +(payment_status?"valid payment":"unvalid payment"));
+        System.out.println("Payment Status: " +(payment_status?"valid payment":"invalid payment"));
 
     }
 
@@ -68,18 +68,35 @@ public class Payment {
             payment_status = true;
         }
 
-
-
-
     }
     private void enterCreditCardNumber() {
         Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter credit card number: ");
-        String CreditCardNumber= scanner.nextLine();
-
+        String CreditCardNumber;
+        while(true) {
 
 
-        System.out.println("Credit card number entered: " + CreditCardNumber);
-    }
-}
+            System.out.println("Enter credit card number: ");
+             CreditCardNumber = scanner.nextLine();
+            if (CreditCardNumber.length() != 16) {
+                System.out.println("invalid card number");
+
+            }
+            else{
+                break;
+            }
+        }
+      while(true){
+
+            System.out.println("enter CCV");
+            String CCV = scanner.nextLine();
+            if (CCV.length() > 3) {
+                System.out.println("invalid CCV");
+
+            } else if(CCV.length() < 3){System.out.println("invalid CCV");}
+            else {
+                System.out.println("Credit card number entered: " + CreditCardNumber);
+                break;
+            }
+
+
+    }}}
