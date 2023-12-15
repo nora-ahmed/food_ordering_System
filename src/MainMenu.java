@@ -1,3 +1,4 @@
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -219,90 +220,90 @@ public  class MainMenu {
         admin1.displayInfo();
         Scanner scanner = new Scanner(System.in);
         boolean exitRequested = false;
-while(true){
-        System.out.println("Choose a restaurant:");
-        for (int i = 0; i < 3; i++) {
-            System.out.println((i + 1) + ") Restaurant: " + Main.restaurants.get(i).getName());
-        }
-        System.out.println("or enter 0 to go back:");
-        int restaurantChoice = getValidIntegerInput(scanner);
-        switch (restaurantChoice) {
-            case 1:
-                admin1 = new Admin(Main.restaurants.get(0));
-                break;
-            case 2:
-                admin1 = new Admin(Main.restaurants.get(1));
-                break;
-            case 3:
-                admin1 = new Admin(Main.restaurants.get(2));
-                break;
-            case 0:
-                System.out.println("Exiting the program. Goodbye!");
-                return;
-            default:
-                System.out.println("Invalid choice.");
-        }
-
-        do {
-            System.out.println("-------------------------------------------------------------------------");
-            System.out.println("1. Add Dish to Menu");
-            System.out.println("2. Remove Dish from Menu");
-            System.out.println("3. Update Dish Price");
-            System.out.println("4. View Menu");
-            System.out.println("5. View Daily Report");
-            System.out.println("6. Exit");
-            System.out.println("Enter your choice: ");
-            System.out.println("-------------------------------------------------------------------------");
-
-            int choice = getValidIntegerInput(scanner);
-
-
-            switch (choice) {
+        while(true){
+            System.out.println("Choose a restaurant:");
+            for (int i = 0; i < 3; i++) {
+                System.out.println((i + 1) + ") Restaurant: " + Main.restaurants.get(i).getName());
+            }
+            System.out.println("or enter 0 to go back:");
+            int restaurantChoice = getValidIntegerInput(scanner);
+            switch (restaurantChoice) {
                 case 1:
-                    System.out.print("Enter dish name: ");
-                    String dishName = scanner.nextLine();
-                    System.out.println("Enter dish price: ");
-                    float dishPrice = getValidFloatInput(scanner);
-                    System.out.print("Enter dish description: ");
-                    String dishDescription = scanner.nextLine();
-                    Dish newDish = new Dish(dishName, dishPrice, dishDescription);
-                    admin1.addDishToMenu(newDish);
+                    admin1 = new Admin(Main.restaurants.get(0));
                     break;
-
                 case 2:
-                    System.out.print("Enter dish name to remove: ");
-                    String dishToRemove = scanner.nextLine();
-                    Dish dish = new Dish(dishToRemove);
-                    admin1.removeDishFromMenu(dish);
+                    admin1 = new Admin(Main.restaurants.get(1));
                     break;
-
                 case 3:
-                    System.out.print("Enter dish name to update price: ");
-                    String dishToUpdate = scanner.nextLine();
-                    Dish dishToUpdateObj = new Dish(dishToUpdate);
-                    System.out.print("Enter new dish price: ");
-                    float newPrice = getValidFloatInput(scanner);
-                    admin1.updateDishPrice(dishToUpdateObj, newPrice);
+                    admin1 = new Admin(Main.restaurants.get(2));
                     break;
-
-                case 4:
-                    admin1.viewMenu();
-                    break;
-                case 5:
-                    admin1.generateReports();
-                    break;
-
-                case 6:
-
-                    exitRequested = true;
-                    break;
-
+                case 0:
+                    System.out.println("Exiting the program. Goodbye!");
+                    return;
                 default:
-                    System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                    System.out.println("Invalid choice.");
             }
 
-        } while (!exitRequested);
-    }}
+            do {
+                System.out.println("-------------------------------------------------------------------------");
+                System.out.println("1. Add Dish to Menu");
+                System.out.println("2. Remove Dish from Menu");
+                System.out.println("3. Update Dish Price");
+                System.out.println("4. View Menu");
+                System.out.println("5. View Daily Report");
+                System.out.println("6. Exit");
+                System.out.println("Enter your choice: ");
+                System.out.println("-------------------------------------------------------------------------");
+
+                int choice = getValidIntegerInput(scanner);
+
+
+                switch (choice) {
+                    case 1:
+                        System.out.print("Enter dish name: ");
+                        String dishName = scanner.nextLine();
+                        System.out.println("Enter dish price: ");
+                        float dishPrice = getValidFloatInput(scanner);
+                        System.out.print("Enter dish description: ");
+                        String dishDescription = scanner.nextLine();
+                        Dish newDish = new Dish(dishName, dishPrice, dishDescription);
+                        admin1.addDishToMenu(newDish);
+                        break;
+
+                    case 2:
+                        System.out.print("Enter dish name to remove: ");
+                        String dishToRemove = scanner.nextLine();
+                        Dish dish = new Dish(dishToRemove);
+                        admin1.removeDishFromMenu(dish);
+                        break;
+
+                    case 3:
+                        System.out.print("Enter dish name to update price: ");
+                        String dishToUpdate = scanner.nextLine();
+                        Dish dishToUpdateObj = new Dish(dishToUpdate);
+                        System.out.print("Enter new dish price: ");
+                        float newPrice = getValidFloatInput(scanner);
+                        admin1.updateDishPrice(dishToUpdateObj, newPrice);
+                        break;
+
+                    case 4:
+                        admin1.viewMenu();
+                        break;
+                    case 5:
+                        admin1.generateReports();
+                        break;
+
+                    case 6:
+
+                        exitRequested = true;
+                        break;
+
+                    default:
+                        System.out.println("Invalid choice. Please enter a number between 1 and 5.");
+                }
+
+            } while (!exitRequested);
+        }}
     public void WelcomePage() throws InterruptedException, IOException {
 
 
@@ -522,7 +523,7 @@ while(true){
                             return;
 
                         } else {
-System.out.println("Invalid, please try again.");
+                            System.out.println("Invalid, please try again.");
 
                         }
                     }
@@ -801,9 +802,10 @@ System.out.println("Invalid, please try again.");
                 // Check if the payment was successful
                 if (payment.getPaymentStatus()) {
                     // Create the order
+Person news=new User();
+news=Main.user.get(Main.thisUser);
 
-
-                    Order order = new Order(Main.c, Main.user.get(Main.thisUser), Main.restaurants.get(Main.thisRes), payment);
+                    Order order = new Order(Main.c,news, Main.restaurants.get(Main.thisRes), payment);
                     order.Preferred_DeliveryTime();
                     int orderTime = 2 * 60; // Convert minutes to seconds
                     OrderTimer orderTimer = new OrderTimer(orderTime);
@@ -814,7 +816,7 @@ System.out.println("Invalid, please try again.");
                     Review userReview = new Review(Main.user.get(Main.thisUser).getUserName());
                     userReview.getReview();
                     Main.restaurants.get(Main.thisRes).addReview(userReview);
-Main.restaurants.get(Main.thisRes).addOrder(order);
+                    Main.restaurants.get(Main.thisRes).addOrder(order);
                     break;
 
 
