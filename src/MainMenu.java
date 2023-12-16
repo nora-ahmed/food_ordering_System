@@ -1,4 +1,3 @@
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -591,11 +590,11 @@ public  class MainMenu {
                                 System.out.println("Enter yes to clear the cart or no to go back:");
                                 Scanner scanner1 = new Scanner(System.in);
                                 String cart = scanner1.next();
-                                if (cart.equals("yes")) {
+                                if (cart.equalsIgnoreCase("yes")) {
                                     Main.c.emptyCart();
                                     System.out.println("Cart cleared");
                                     break;
-                                } else if (cart.equals("no")) {
+                                } else if (cart.equalsIgnoreCase("no")) {
                                     return;
 
                                 } else {
@@ -803,6 +802,7 @@ public  class MainMenu {
                 if (payment.getPaymentStatus()) {
                     // Create the order
 Person news=new User();
+
 news=Main.user.get(Main.thisUser);
 
                     Order order = new Order(Main.c,news, Main.restaurants.get(Main.thisRes), payment);
