@@ -80,7 +80,8 @@ public class Payment {
 
 
             System.out.println("Enter credit card number: ");
-             CreditCardNumber = scanner.nextLine();
+            CreditCardNumber = scanner.nextLine();
+            if(CreditCardNumber.matches("\\d+")){
             if (CreditCardNumber.length() != 16) {
                 System.out.println("invalid card number");
 
@@ -89,10 +90,15 @@ public class Payment {
                 break;
             }
         }
-      while(true){
+        else {
+            System.out.println("invalid card number");
+            }
+        }
+        while(true){
 
             System.out.println("enter CCV");
             String CCV = scanner.nextLine();
+            if(CCV.matches("\\d+")){
             if (CCV.length() > 3) {
                 System.out.println("invalid CCV");
 
@@ -100,7 +106,11 @@ public class Payment {
             else {
                 System.out.println("Credit card number entered: " + CreditCardNumber);
                 break;
-            }
+            }}
+            else{
+                System.out.println("invalid CCV");
+                }
 
 
-    }}}
+
+        }}}
