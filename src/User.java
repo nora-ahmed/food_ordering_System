@@ -4,7 +4,9 @@ import java.util.List;
 
 public class User extends Person {
     private String deliveryAddress;
-    public static int numberOfUsers = 0;
+User (){
+
+}
 
     public void setDeliveryAddress( String deliveryAddress) {
         this.deliveryAddress = deliveryAddress;
@@ -72,29 +74,29 @@ public class User extends Person {
     }
 
 
-        public static int Login(List<User> userList)
-        {
+    public static int Login(List<User> userList)
+    {
 
-            Scanner read = new Scanner(System.in);
+        Scanner read = new Scanner(System.in);
 
-            System.out.print("Enter your username : ");
-            String enteredUserName = read.nextLine();
+        System.out.print("Enter your username : ");
+        String enteredUserName = read.nextLine();
 
-            System.out.print("Enter your password : ");
-            String enteredPassword = read.nextLine();
+        System.out.print("Enter your password : ");
+        String enteredPassword = read.nextLine();
 
-            for (User user : userList) {
+        for (User user : userList) {
 
-                if (user.getUserName().equals(enteredUserName) && user.getPassword().equals(enteredPassword)) {
-                    return 1;
-                }
-                else if (enteredUserName.equals("Susan") && enteredPassword.equals("12345678")){
-
-                    return 2;
-                }
+            if (user.getUserName().equals(enteredUserName) && user.getPassword().equals(enteredPassword)) {
+                return 1;
             }
-            return 0;
+            else if (enteredUserName.equals("Susan") && enteredPassword.equals("12345678")){
+
+                return 2;
+            }
         }
+        return 0;
+    }
 
 
     private static boolean  IsUserNameUnique(String newUserName , List<User> userList){
@@ -145,6 +147,6 @@ public class User extends Person {
 
     @Override
     public void displayInfo() {
-    System.out.println("-----------------------Welcome user "+getUserName()+"-----------------------");
+        System.out.println("-----------------------Welcome user "+getUserName()+"-----------------------");
     }
 }
